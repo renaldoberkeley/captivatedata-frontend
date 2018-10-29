@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './AdelineSGDContainer.css';
 import axios from 'axios'
+import {Link} from "react-router-dom";
+
+import { render } from 'react-dom'
 
 
 var xhr;
@@ -59,6 +62,7 @@ class AdelineSGDContainer extends Component {
 
     return (
       <div className="">
+          <p> <Link to="/"> Home </Link> </p>
           <p>Hello AdalineSGD!!!!!!!!!</p>
           <p>This is the cost data from Adaline Stochastic Gradient Descent Algorithm</p>
           <ul>{costtItems}</ul>

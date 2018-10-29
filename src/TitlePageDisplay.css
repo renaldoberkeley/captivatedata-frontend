@@ -21,7 +21,7 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 310px/32px;
-    opacity: .1;
+    opacity: 0;
     /* position: absolute; */
     /* top: 346px; */
     z-index: -1;

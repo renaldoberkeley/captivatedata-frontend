@@ -37,7 +37,7 @@ class TitlePageDisplay extends Component {
       TweenMax.to(mainDiv, 2, {"padding-top": "-=70px", autoAlpha: 1, onComplete: this.fadeInComplete})
 
       const shadowDiv = document.getElementById("shadow-id")
-      TweenMax.to(shadowDiv, 1, {opacity: .4, delay: 2} )
+      TweenMax.to(shadowDiv, 1, {opacity: .2, delay: 2} )
 
 
 
@@ -78,7 +78,7 @@ class TitlePageDisplay extends Component {
       <div className="main-div" id="main-div-id">
 
         <h2 className="main-title">CaptivateData</h2>
-        <h2 className="sub-title">Making datascience easier to learn through intelligent tutor systems.</h2>
+        <h2 className="sub-title">Making datascience easier through intelligent tutor systems.</h2>
 
         <div className="shadow" id="shadow-id"> </div>
 
