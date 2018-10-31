@@ -1,0 +1,57 @@
+.font {
+    font-size: 30px;
+}
+
+.google-visualization-table-th {
+    text-align: center !important;
+    font-size: 20px;
+    background: #212529 !important;
+    color: white;
+    font-weight: lighter;
+    font-family: Avenir Next;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    border-radius: 11px;
+}
+
+.google-visualization-table-td {
+    text-align: center !important;
+    font-size: 20px;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+/*Set the index column width*/
+.google-visualization-table-th:nth-child(1) {
+    width: 70px !important;
+}
+
+.google-visualization-table-td:nth-child(1) {
+    color: lightblue;
+}
+
+.table-data-container {
+    overflow: scroll;
+    border-radius: 10px;
+
+
+    height: 700px;
+    -webkit-box-shadow: -15px -9px 39px -5px rgba(0,0,0,0.48);
+-moz-box-shadow: -15px -9px 39px -5px rgba(0,0,0,0.48);
+box-shadow: -15px -9px 39px -5px rgba(0,0,0,0.48)
+}
+
+.table-section-container {
+    float: right;
+    width: 70%;
+    font-size: 30px;
+}
+
+.table-section-title {
+    margin: 14px;
+    color: white;
+}
+
+.measure-skill-text {
+    color: white;
+}

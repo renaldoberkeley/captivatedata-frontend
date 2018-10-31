@@ -57,7 +57,7 @@ class TitlePageDisplay extends Component {
 
        console.log("Out Complete")
 
-      window.location.assign(window.location.href + 'adalinesgd');
+      window.location.assign(window.location.href + 'table');
 
 
   }

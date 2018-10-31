@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import TitlePageDisplay from './TitlePageDisplay';
 import AdelineSGDContainer from './AdelineSGDContainer';
+import TableDisplay from "./TableDisplay";
+
 import { render } from 'react-dom'
 
 import { Link } from 'react-router-dom'
@@ -12,6 +14,8 @@ import {
     Route,
     Switch
 } from 'react-router-dom'
+
+
 
 
 class App extends Component {
@@ -34,7 +38,8 @@ class App extends Component {
         <HashRouter>
         <div>
             <Switch>
-                <Route exact path="/adalinesgd" component={AdelineSGDContainer} />
+                <Route path="/table" component={TableDisplay} />
+                <Route path="/adalinesgd" component={AdelineSGDContainer} />
                 <Route exact path="/" component={TitlePageDisplay} />
                 <Route component={Whoops} />
             </Switch>

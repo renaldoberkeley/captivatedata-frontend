@@ -8,6 +8,7 @@
     padding-top: 200px;
     visibility: hidden;
     opacity: 0;
+     color: white;
     /*-webkit-animation: fadein 2s;*/
 
 
@@ -35,6 +36,7 @@
     font-size: 45px;
     letter-spacing: 10px;
     margin-bottom: 0px;
+
 }
 
 .sub-title {
