@@ -6,10 +6,32 @@ html, body {
 }
 
 body {
+
+     /*background: url("./images/nightsand2.jpg") no-repeat center center fixed;*/
+      /*-webkit-background-size: cover;*/
+      /*-moz-background-size: cover;*/
+      /*-o-background-size: cover;*/
+      /*background-size: cover;*/
+
+     /*-webkit-transition: background 2s;*/
+    /*-moz-transition: background 2s;*/
+    /*-o-transition: background 2s;*/
+    /*transition: background 2s;*/
+
+    /*-ms-transform: scale(1.2);*/
+    /*-moz-transform: scale(1.2);*/
+    /*-webkit-transform: scale(1.2);*/
+    /*-o-transform: scale(1.2);*/
+    /*transform: scale(1.2);*/
+
+    overflow: hidden;
+}
+
+body {
   background-color: white;
 
 
-    background: linear-gradient(45deg, #4158d0, #c850c0);
-    background-size: cover;
+    /*background: linear-gradient(45deg, #4158d0, #c850c0);*/
+    /*background-size: cover;*/
 
 }
