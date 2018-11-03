@@ -95,7 +95,7 @@ class TitlePageDisplay extends Component {
 
               <div className="title-section">
             <h2 className="main-title">CaptivateData</h2>
-            <h2 className="sub-title">Making computer science and data science captivating through intelligent tutor systems.</h2>
+            <h2 className="sub-title">Making computer science captivating through intelligent tutor systems.</h2>
               </div>
 
 
