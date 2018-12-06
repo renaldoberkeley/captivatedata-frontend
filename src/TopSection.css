@@ -1,0 +1,11 @@
+.top-section {
+    flex: 1 4 auto;
+    background: black;
+    border-bottom: 1px solid grey;
+    display: flex;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 229px;
+
+
+}

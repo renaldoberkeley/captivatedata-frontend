@@ -1,0 +1,14 @@
+.right-top-section {
+    flex: 4 1 auto;
+    /*background: aquamarine;*/
+    /*padding-left: 100px;*/
+    padding-right: 100px;
+}
+
+
+.question-text {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+}

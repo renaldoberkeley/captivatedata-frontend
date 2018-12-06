@@ -37,9 +37,9 @@ class TitlePageDisplay extends Component {
       TweenMax.to(mainDiv, 2, {"padding-top": "-=70px", opacity: 1, onComplete: this.fadeInComplete})
 
 
-      const custombackground = document.getElementById("custom-background-id")
+      //const custombackground = document.getElementById("custom-background-id")
 
-      TweenMax.to(custombackground, 10, {scale:1.2, transformOrigin:"50% 50%"})
+     // TweenMax.to(custombackground, 10, {scale:1.2, transformOrigin:"50% 50%"})
 
      // const shadowDiv = document.getElementById("shadow-id")
      // TweenMax.to(shadowDiv, 1, {opacity: .2, delay: 2} )
@@ -64,7 +64,7 @@ class TitlePageDisplay extends Component {
 
        console.log("Out Complete")
 
-      window.location.assign(window.location.href + 'table');
+      window.location.assign(window.location.href + 'sample');
 
 
   }
@@ -84,9 +84,9 @@ class TitlePageDisplay extends Component {
     return (
         <div>
 
-        <div className="custom-background" id={"custom-background-id"}>
+        {/*<div className="custom-background" id={"custom-background-id"}>*/}
 
-         </div>
+         {/*</div>*/}
 
 
           <div className="main-div" id="main-div-id">
@@ -94,8 +94,8 @@ class TitlePageDisplay extends Component {
                {/*<div className="shadow" id="shadow-id"> </div>*/}
 
               <div className="title-section">
-            <h2 className="main-title">CaptivateData</h2>
-            <h2 className="sub-title">Making computer science captivating through intelligent tutor systems.</h2>
+            {/*<h2 className="main-title">CaptivateData</h2>*/}
+            {/*<h2 className="sub-title">Using intelligent tutor systems to make computer science more captivating.</h2>*/}
               </div>
 
 

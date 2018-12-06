@@ -1,0 +1,24 @@
+.left-top-section {
+    flex: 1 1 auto;
+
+    background: green;
+    text-align: right;
+}
+
+.ferret {
+    /*background-image: url(./images/ferret_animation_1.gif);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*width: 50%;*/
+    /*height: 100%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+
+.ferret-gif {
+    padding-top: 0px;
+    background-size: cover;
+    width: 327px;
+    content: url("./images/ferret_animation_full.gif");
+
+}

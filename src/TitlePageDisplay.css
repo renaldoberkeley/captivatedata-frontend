@@ -1,21 +1,21 @@
 
 
-.custom-background {
-     background: url("./images/nightsand2.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
+/*.custom-background {*/
+     /*background: url("./images/nightsand2.jpg") no-repeat center center fixed;*/
+      /*-webkit-background-size: cover;*/
+      /*-moz-background-size: cover;*/
+      /*-o-background-size: cover;*/
+      /*background-size: cover;*/
 
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
+        /*height: 100%;*/
+        /*width: 100%;*/
+        /*position: absolute;*/
+        /*z-index: -1;*/
 
-    /*overflow: hidden;*/
+    /*!*overflow: hidden;*!*/
 
 
-}
+/*}*/
 
 .main-div {
     /*width: 410px;*/
@@ -23,12 +23,11 @@
     padding: 40px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 200px;
-    /*visibility: hidden;*/
+    padding-top: 400px;
     opacity: 0;
 
      color: white;
-    z-index: 1000;
+    /*z-index: 1000;*/
     /*-webkit-animation: fadein 2s;*/
 
 
@@ -36,12 +35,15 @@
 
 .title-section {
 
-        background: #00000059;
-    width: 892px;
-    height: 240px;
+    width: 927px;
+    height: 149px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 447px/138px;
+
+
+
+    background: url("./images/captivate-logo.png") no-repeat;
+    background-size: contain;
 
 
 }

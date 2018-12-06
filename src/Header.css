@@ -1,0 +1,21 @@
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    padding-left: 40px;
+    padding-top: 10px;
+    /*padding-bottom: 10px;*/
+
+    flex: 1 1 auto;
+
+}
+
+
+.logo {
+    background: url("./images/captivate-logo.png") no-repeat;
+    background-size: 11%;
+    /*margin-top: 10px;*/
+    /*margin-left: 10px;*/
+    /* margin-bottom: 10px; */
+
+}
