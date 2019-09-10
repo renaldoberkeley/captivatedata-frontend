@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './LeftTopSection.css';
+import '../css/LeftTopSection.css';
 
 class LeftTopSection extends Component {
 
@@ -9,11 +9,6 @@ class LeftTopSection extends Component {
         super(props);
 
     }
-
-    componentDidMount() {
-
-    }
-
 
     render() {
 

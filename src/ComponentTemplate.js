@@ -14,21 +14,10 @@ class SomeComponent extends Component {
     this.someMethod = this.someMethod.bind(this);
   }
 
-  componentDidMount() {
-
-  }
-
-  someMethod() {
-
-  }
-
-
-
   render() {
 
     return (
       <div className="" id="">
-
       </div>
     );
   }

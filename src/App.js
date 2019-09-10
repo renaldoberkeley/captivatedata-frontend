@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
-import TitlePageDisplay from './TitlePageDisplay';
-import AdelineSGDContainer from './AdelineSGDContainer';
+import TitlePageDisplay from './Startup/TitlePageDisplay';
 import TableDisplay from "./TableDisplay";
-import SampleQuestion from "./SampleQuestion"
+import SampleQuestion from "./Page_Layout/SampleQuestion"
 import StatsPage from "./StatsPage"
 
 
-
 import { render } from 'react-dom'
-
 import { Link } from 'react-router-dom'
-
-
-
 import {
     HashRouter,
     Route,
     Switch
 } from 'react-router-dom'
-import HiScreen from "./HiScreen";
-
-
+import HiScreen from "./Startup/HiScreen";
 
 
 class App extends Component {
@@ -30,25 +22,16 @@ class App extends Component {
 
   }
 
-  componentDidMount() {
-
-  }
-
-
   render() {
-
-
 
     return (
         <HashRouter>
         <div>
             <Switch>
                 <Route path="/table" component={TableDisplay} />
-                <Route path="/adalinesgd" component={AdelineSGDContainer} />
                 <Route path="/sample" component={SampleQuestion} />
                 <Route path="/welcome" component={HiScreen} />
                 <Route path="/stats" component={StatsPage} />
-
                 <Route exact path="/" component={TitlePageDisplay} />
                 <Route component={Whoops} />
             </Switch>

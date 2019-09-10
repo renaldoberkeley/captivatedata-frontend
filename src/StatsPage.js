@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './StatsPage.css';
-import Q1_Part1 from './Q1_Part1.js'
-import Q1_Part2 from './Q1_Part2.js'
-import HintSection from './HintSection.js'
+import './css/StatsPage.css';
+import Q1_Part1 from './Question1/Q1_Part1.js'
+import Q1_Part2 from './Question1/Q1_Part2.js'
+import HintSection from './Page_Layout/HintSection.js'
 
 import {GoogleCharts} from 'google-charts'
 import { Chart } from "react-google-charts";
@@ -22,17 +22,12 @@ class StatsPage extends Component {
             showHint: false
         };
 
-
-
     }
 
     componentDidMount() {
 
         GoogleCharts.load(this.drawPlot);
-
         const statsDiv = document.getElementById("stats-page-id")
-
-
         var tl = new TimelineLite({id: "timeline"})
 
         tl.to(statsDiv, 1, {bottom: "0px"})
@@ -68,43 +63,6 @@ class StatsPage extends Component {
                 }
             }
         };
-
-
-        //
-        // var chart = new GoogleCharts.api.visualization.Bar(document.getElementById('dual_x_div'));
-        //
-        //
-        //
-        //
-        // var cost_data = this.state.cost_data
-        //
-        //
-        // data.addColumn('number', 'Cost');
-        // data.addColumn('number', 'Column 2');
-        // data.addColumn('number', 'Column 3');
-        //
-        //
-        // data.addRows(cost_data.length);
-        //
-        // cost_data.forEach(function (value, i) {
-        //
-        //     data.setCell(i, 0, value);
-        //     data.setCell(i, 1, 0);
-        //     data.setCell(i, 2, 0);
-        //
-        // });
-        //
-        //
-        // var table = new GoogleCharts.api.visualization.Table(document.getElementById('table-data-id'));
-        // table.draw(data, {showRowNumber: true, width: '100%', height: '100%', allowHtml: true});
-        //
-        // new GoogleCharts.api.visualization.events.addListener(table, 'select', function() {
-        //     var row = table.getSelection()[0].row;
-        //     alert('You selected ' + data.getValue(row, 0));
-        //
-        // });
-
-
 
     }
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './HiScreen.css';
+import '../css/HiScreen.css';
 import anime from 'animejs'
 
 class HiScreen extends Component {
@@ -41,7 +41,7 @@ class HiScreen extends Component {
             duration: 1200,
             offset: '-=550'
         }).add({
-            targets: '.ml8 .bang',
+            targets: '.ml8  .bang',
             scale: [0, 1],
             rotateZ: [45, 15],
             duration: 1200,
@@ -74,14 +74,18 @@ class HiScreen extends Component {
         return (
 
             <h1 className="ml8">
-              <span className="letters-container">
-                <span className="letters letters-left">Hi</span>
-                <span className="letters bang">!</span>
-              </span>
 
-                <span className="circle circle-white"></span>
-                <span className="circle circle-dark"></span>
-                <span className="circle circle-container"><span className="circle circle-dark-dashed"></span></span>
+
+                <div className="circle circle-white"></div>
+                <div className="circle circle-dark">
+
+                    <div className="letters-container">
+                        <div className="letters letters-left">Hi</div>
+                        <div className="letters bang">!</div>
+                    </div>
+
+                </div>
+                <div className="circle circle-container"><div className="circle circle-dark-dashed"></div></div>
             </h1>
         );
     }

@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
-import './Header.css';
+import '../css/Header.css';
 
 
 class Header extends Component {
 
-
-
-
     constructor(props) {
         super(props);
-
-    }
-
-    componentDidMount() {
 
     }
 
@@ -24,7 +17,6 @@ class Header extends Component {
             <div className="header">
 
                 <div className="logo"> </div>
-
 
             </div>
         );

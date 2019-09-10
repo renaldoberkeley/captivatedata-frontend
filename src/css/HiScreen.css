@@ -14,17 +14,17 @@ h1.ml8 {
     font-family: 'Fredoka One', cursive;
 }
 
-.ml8 .letters-container {
+.letters-container {
     position: absolute;
-    left: 870px;
-    right: 0;
-    margin: auto;
-    top: 0;
+    /* left: 870px; */
+    right: 40px;
+    /* margin: auto; */
+    top: 43px;
     bottom: 0;
     height: 1em;
 }
 
-.ml8 .letters {
+.letters {
     position: relative;
     z-index: 2;
     display: inline-block;
@@ -33,7 +33,7 @@ h1.ml8 {
     top: -0.2em;
 }
 
-.ml8 .bang {
+.bang {
     font-size: 1.4em;
     top: auto;
     /*left: -0.06em;*/

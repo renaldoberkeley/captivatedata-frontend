@@ -1,22 +1,15 @@
-import React, { Component } from 'react';
-import './Q1_Part2.css';
+import React, {Component} from 'react';
+import '../css/Q1_Part2.css';
 import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
 
 
 class Q1_Part2 extends Component {
 
 
-
     constructor(props) {
         super(props);
 
     }
-
-    componentDidMount() {
-
-    }
-
-
 
     render() {
 
@@ -29,6 +22,8 @@ class Q1_Part2 extends Component {
                 <div className="q1-part2-values-field">
 
                     <table className="q1-part2-table">
+
+                        <tbody>
 
                         <tr>
                             <td><input type="text" name="weight" onClick={this.props.hideHint}/></td>
@@ -51,8 +46,11 @@ class Q1_Part2 extends Component {
                                 </select>
                             </td>
 
-
                         </tr>
+
+
+                        </tbody>
+
 
                     </table>
 

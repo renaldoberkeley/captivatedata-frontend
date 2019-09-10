@@ -35,6 +35,7 @@
     color: white;
     font-family: 'Roboto Mono', monospace;
     padding-left: 32px;
+    z-index: 100;
 
 
 }

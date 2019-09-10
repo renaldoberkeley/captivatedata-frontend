@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './TableDisplay.css';
+import React, {Component} from 'react';
+import './css/TableDisplay.css';
 import $ from 'jquery';
-import { Chart } from "react-google-charts";
+import {Chart} from "react-google-charts";
 import {GoogleCharts} from 'google-charts'
 import {Link} from "react-router-dom";
 import axios from "axios";
@@ -13,14 +13,14 @@ import ReactSpeedometer from "react-d3-speedometer"
 
 
 const options = {
-  title: "Company Performance",
-  curveType: "function",
-  legend: { position: "bottom" },
-  pageSize: 30,
+    title: "Company Performance",
+    curveType: "function",
+    legend: {position: "bottom"},
+    pageSize: 30,
     showRowNumber: "true"
 };
 
- var options_gauge = {
+var options_gauge = {
     width: 580,
     height: 320,
     min: 0,
@@ -34,177 +34,132 @@ const options = {
     minorTicks: 5
 };
 
- const getRandomNumber = () => {
-     let num = (Math.random() * 100).toFixed(1);
+const getRandomNumber = () => {
+    let num = (Math.random() * 100).toFixed(1);
     return Number(num)
 };
 
 class TableDisplay extends Component {
 
 
-
-   getData = () => {
-    return [
-      ["Label", "Value"],
-      ["Knowledge", this.state.knowledge],
-    ];
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      // networkSpeed: 1,
-      knowledge: 0,
-      // cpu: 55,
-      cost_data: []
+    getData = () => {
+        return [
+            ["Label", "Value"],
+            ["Knowledge", this.state.knowledge],
+        ];
     };
 
-    this.processRequest = this.processRequest.bind(this);
+    constructor(props) {
+        super(props);
 
-    this.drawTable = this.drawTable.bind(this);
-    this.getData = this.getData.bind(this);
-  }
-
-  componentDidMount() {
-
-     axios.get('http://162.243.146.199/adalineSGD/').then(response => this.processRequest(response) )
-    .catch(function (error) {
-      console.log(error);
-    });
-
-
-    //Load the charts library with a callback
-  GoogleCharts.load(this.drawTable);
-
-  this.intervalID = setInterval(() => {
-      this.setState(state => {
-        return {
-          ...state,
-          knowledge: getRandomNumber(),
+        this.state = {
+            // networkSpeed: 1,
+            knowledge: 0,
+            // cpu: 55,
+            cost_data: []
         };
-      });
-    }, 3000);
 
-    //GoogleCharts.api.charts.load('current', {'packages':['corechart']});
+        this.processRequest = this.processRequest.bind(this);
+
+        this.drawTable = this.drawTable.bind(this);
+        this.getData = this.getData.bind(this);
+    }
+
+    componentDidMount() {
+
+        axios.get('http://162.243.146.199/adalineSGD/').then(response => this.processRequest(response))
+            .catch(function (error) {
+                console.log(error);
+            });
 
 
-  //  GoogleCharts.api.charts.setOnLoadCallback(this.drawTable)
-  }
+        //Load the charts library with a callback
+        GoogleCharts.load(this.drawTable);
+
+        this.intervalID = setInterval(() => {
+            this.setState(state => {
+                return {
+                    ...state,
+                    knowledge: getRandomNumber(),
+                };
+            });
+        }, 3000);
+    }
 
 
-  processRequest(response) {
+    processRequest(response) {
 
-      if(response.status == 200)
-      {
-        this.setState({
-            cost_data: response.data.adaline_cost_data
+        if (response.status == 200) {
+            this.setState({
+                cost_data: response.data.adaline_cost_data
+            });
+
+            this.drawTable()
+        }
+
+
+    }
+
+
+    drawTable() {
+
+        var data = new GoogleCharts.api.visualization.DataTable();
+        var cost_data = this.state.cost_data
+        data.addColumn('number', 'Cost');
+        data.addColumn('number', 'Column 2');
+        data.addColumn('number', 'Column 3');
+        data.addRows(cost_data.length);
+
+        cost_data.forEach(function (value, i) {
+
+            data.setCell(i, 0, value);
+            data.setCell(i, 1, 0);
+            data.setCell(i, 2, 0);
+
         });
 
-        this.drawTable()
-      }
 
+        var table = new GoogleCharts.api.visualization.Table(document.getElementById('table-data-id'));
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%', allowHtml: true});
 
-  }
-
-
-   drawTable() {
-
-      var data = new GoogleCharts.api.visualization.DataTable();
-
-
-      var cost_data = this.state.cost_data
-
-
-      data.addColumn('number', 'Cost');
-      data.addColumn('number', 'Column 2');
-      data.addColumn('number', 'Column 3');
-
-
-       data.addRows(cost_data.length);
-
-       cost_data.forEach(function (value, i) {
-
-           data.setCell(i, 0, value);
-           data.setCell(i, 1, 0);
-           data.setCell(i, 2, 0);
+        new GoogleCharts.api.visualization.events.addListener(table, 'select', function () {
+            var row = table.getSelection()[0].row;
+            alert('You selected ' + data.getValue(row, 0));
 
         });
 
-
-      var table = new GoogleCharts.api.visualization.Table(document.getElementById('table-data-id'));
-      table.draw(data, {showRowNumber: true, width: '100%', height: '100%', allowHtml: true});
-
-      new GoogleCharts.api.visualization.events.addListener(table, 'select', function() {
-        var row = table.getSelection()[0].row;
-        alert('You selected ' + data.getValue(row, 0));
-
-      });
+    }
 
 
-
-  }
-
+    render() {
 
 
-  render() {
+        return (
+            <div>
+                <p><Link to="/"> Home </Link></p>
 
 
-     // var cost_data = this.state.cost_data
-     //
-     //  const data = [["Cost", "Data 2", "Data 3"]] // headers
-     //
-     //
-     //  cost_data.map((cost) =>
-     //
-     //      data.push([cost, "No data", "No Data"])
-     //
-     //  );
+                <div className="table-section-container">
+                    <p className="table-section-title"> Adaline Stochastic Gradient Descent Cost Data</p>
+                    <div className="table-data-container">
+                        <div className="table-data" id="table-data-id"></div>
+                    </div>
 
+                </div>
 
-    return (
-      <div>
-         <p> <Link to="/"> Home </Link> </p>
+                <p className="measure-skill-text"> Measuring your knowledge level for the skill tested. </p>
 
+                <Chart
+                    chartType="Gauge"
+                    width="100%"
+                    height="400px"
+                    data={this.getData()}
+                    options={options_gauge}
+                />
 
-          <div className="table-section-container">
-
-           <p className="table-section-title"> Adaline Stochastic Gradient Descent Cost Data</p>
-
-
-          <div className="table-data-container">
-
-
-            <div className="table-data" id="table-data-id"> </div>
-          </div>
-
-          </div>
-
-
-        {/*<p> Creating table using Chart Component</p>*/}
-
-        {/*<Chart*/}
-          {/*chartType="Table"*/}
-          {/*width="100%"*/}
-          {/*height="100%"*/}
-          {/*data={data}*/}
-          {/*options={options}*/}
-        {/*/>*/}
-
-        <p className="measure-skill-text"> Measuring your knowledge level for the skill tested. </p>
-
-        <Chart
-          chartType="Gauge"
-          width="100%"
-          height="400px"
-          data={this.getData()}
-          options={options_gauge}
-        />
-
-
-      </div>
-    );
-  }
+            </div>
+        );
+    }
 }
 
 export default TableDisplay;
