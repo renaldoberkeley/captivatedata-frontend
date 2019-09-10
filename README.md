@@ -2,7 +2,7 @@
 
 http://www.captivatedata.org/#/
 
-This web application is intended to be a basic sample of what an intelligent tutor UI could look like. It is very basic.
+This web application is intended to be a basic sample of what a basic web tutor UI could look like. The application was built using React.js.
 
 Startup Instructions:
 
