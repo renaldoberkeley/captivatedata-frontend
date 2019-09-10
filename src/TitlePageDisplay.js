@@ -21,7 +21,10 @@ class TitlePageDisplay extends Component {
 
   componentDidMount() {
 
-  //     $( ".main-div" ).animate({
+      document.getElementById("body-id").style.background = "black";
+
+
+      //     $( ".main-div" ).animate({
   //
   //         opacity: 1,
   //         "padding-top": "-=70",
@@ -64,7 +67,7 @@ class TitlePageDisplay extends Component {
 
        console.log("Out Complete")
 
-      window.location.assign(window.location.href + 'sample');
+      window.location.assign(window.location.href + 'welcome');
 
 
   }

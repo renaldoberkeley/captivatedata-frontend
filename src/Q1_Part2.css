@@ -1,0 +1,70 @@
+.q1-part2 {
+
+    width: 850px;
+    height: 400px;
+    background-color: #ffedf0;
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 1880px;
+    text-align: center;
+
+}
+
+.instructions-q1-part2 {
+    font-size: 30px;
+    margin-top: 30px;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    font-family: 'Roboto Mono', monospace;
+    color: #8a3d4a;
+}
+
+.q1-part2-values-field {
+    margin-top: 103px;
+}
+
+.q1-part2-table {
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.q1-part2-table td {
+    width: 100px;
+    font-size: 30px;
+}
+
+.q1-part2-table input {
+    height: 40px;
+    font-size: 30px;
+    width: 100px;
+    border-radius: 3px;
+}
+
+.q1-part2-table td:nth-child(1) {
+    width: 30px;
+}
+
+.q1-part2-table td:nth-child(3) {
+    width: 50px;
+}
+
+.q1-part2-table td:nth-child(4) {
+    width: 220px;
+}
+
+.q1-part2-table td:nth-child(5) {
+    width: 70px;
+}
+
+
+.q1-part2-table select {
+    width: 100px;
+    height: 47px;
+    font-size: 20px;
+}

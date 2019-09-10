@@ -2,13 +2,21 @@
     flex: 4 1 auto;
     /*background: aquamarine;*/
     /*padding-left: 100px;*/
-    padding-right: 100px;
+    padding-right: 0px;
 }
 
 
 .question-text {
     text-align: center;
-    padding-top: 20px;
-    font-size: 30px;
+    /* padding-top: 14px; */
+    font-size: 26px;
     color: white;
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0;
+
+}
+
+.question-text .letter {
+    display: inline-block;
+    line-height: 1em;
 }

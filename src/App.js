@@ -3,6 +3,9 @@ import TitlePageDisplay from './TitlePageDisplay';
 import AdelineSGDContainer from './AdelineSGDContainer';
 import TableDisplay from "./TableDisplay";
 import SampleQuestion from "./SampleQuestion"
+import StatsPage from "./StatsPage"
+
+
 
 import { render } from 'react-dom'
 
@@ -15,6 +18,7 @@ import {
     Route,
     Switch
 } from 'react-router-dom'
+import HiScreen from "./HiScreen";
 
 
 
@@ -42,6 +46,9 @@ class App extends Component {
                 <Route path="/table" component={TableDisplay} />
                 <Route path="/adalinesgd" component={AdelineSGDContainer} />
                 <Route path="/sample" component={SampleQuestion} />
+                <Route path="/welcome" component={HiScreen} />
+                <Route path="/stats" component={StatsPage} />
+
                 <Route exact path="/" component={TitlePageDisplay} />
                 <Route component={Whoops} />
             </Switch>
