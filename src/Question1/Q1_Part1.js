@@ -94,6 +94,10 @@ class Q1_Part1 extends Component {
 
                     </table>
 
+                    <div className="click-return-text"><span className="red-text">Red</span> means incorrect value.
+                    </div>
+                    <div className="click-return-text">Click Return after entering values.</div>
+
 
                 </div>
             </div>

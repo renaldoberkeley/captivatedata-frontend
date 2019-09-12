@@ -65,3 +65,14 @@
 .q1-part1-table tr {
     height: 65px;
 }
+
+.click-return-text {
+    margin-top: 20px;
+    color: grey;
+    font-family: Avenir next;
+    height: 0px;
+}
+
+.red-text {
+    color: #d00707;
+}
