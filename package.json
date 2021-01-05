@@ -5,7 +5,7 @@
   "dependencies": {
     "anime": "^0.1.2",
     "animejs": "^2.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "gsap": "^2.0.2",
     "jquery": "^3.3.1",
     "react": "^16.6.0",
